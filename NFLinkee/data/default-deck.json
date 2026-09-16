@@ -1,0 +1,66 @@
+{
+  "game": "NFL Linkee",
+  "version": 1,
+  "cards": [
+    {
+      "theme": "NFL Draft",
+      "qs": [
+        { "q": "Which QB did the Colts take with the #1 overall pick in 1998?", "a": "Peyton Manning" },
+        { "q": "Who was the #1 overall pick in 2012?", "a": "Andrew Luck" },
+        { "q": "Who went #1 overall to the Bengals in 2020?", "a": "Joe Burrow" },
+        { "q": "Who was the #1 overall pick in 2021?", "a": "Trevor Lawrence" }
+      ],
+      "link": "#1 overall NFL Draft picks"
+    },
+    {
+      "theme": "Super Bowl History",
+      "qs": [
+        { "q": "Which team won Super Bowls IX and X?", "a": "Pittsburgh Steelers" },
+        { "q": "Which team won Super Bowls XXIII and XXIV?", "a": "San Francisco 49ers" },
+        { "q": "Which team won Super Bowls XXVII and XXVIII?", "a": "Dallas Cowboys" },
+        { "q": "Which team won Super Bowls XXXII and XXXIII?", "a": "Denver Broncos" }
+      ],
+      "link": "Teams that won back-to-back Super Bowls"
+    },
+    {
+      "theme": "Franchises",
+      "qs": [
+        { "q": "Which team plays in the \"Dawg Pound\"?", "a": "Cleveland Browns" },
+        { "q": "Which team plays at Ford Field?", "a": "Detroit Lions" },
+        { "q": "Which team is based in Jacksonville?", "a": "Jacksonville Jaguars" },
+        { "q": "Which team joined the NFL as an expansion team in 2002?", "a": "Houston Texans" }
+      ],
+      "link": "Teams that have never played in a Super Bowl"
+    },
+    {
+      "theme": "Divisions",
+      "qs": [
+        { "q": "Which team won Super Bowl XX with the \"46\" defense?", "a": "Chicago Bears" },
+        { "q": "Which team has the most NFL championships?", "a": "Green Bay Packers" },
+        { "q": "Which team blows the Gjallarhorn before kickoff?", "a": "Minnesota Vikings" },
+        { "q": "Which team went 0-16 in 2008?", "a": "Detroit Lions" }
+      ],
+      "link": "NFC North teams"
+    },
+    {
+      "theme": "Rushing",
+      "qs": [
+        { "q": "Who set the single-season rushing record in 1984?", "a": "Eric Dickerson" },
+        { "q": "Who rushed for 2,105 yards in 2003?", "a": "Jamal Lewis" },
+        { "q": "Who rushed for 2,097 yards in 2012?", "a": "Adrian Peterson" },
+        { "q": "Who rushed for 2,027 yards in 2020?", "a": "Derrick Henry" }
+      ],
+      "link": "Running backs with a 2,000-yard season"
+    },
+    {
+      "theme": "Birds",
+      "qs": [
+        { "q": "Which team won Super Bowl LII?", "a": "Philadelphia Eagles" },
+        { "q": "Which team blew a 28-3 lead in Super Bowl LI?", "a": "Atlanta Falcons" },
+        { "q": "Which team won Super Bowl XLVIII?", "a": "Seattle Seahawks" },
+        { "q": "Which team plays its home games in Glendale, Arizona?", "a": "Arizona Cardinals" }
+      ],
+      "link": "NFL teams named after birds"
+    }
+  ]
+}
