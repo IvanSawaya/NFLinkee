@@ -3,64 +3,257 @@
   "version": 1,
   "cards": [
     {
-      "theme": "NFL Draft",
+      "id": "909szky",
+      "theme": "HINT: First time was so nice, they had to do it twice",
       "qs": [
-        { "q": "Which QB did the Colts take with the #1 overall pick in 1998?", "a": "Peyton Manning" },
-        { "q": "Who was the #1 overall pick in 2012?", "a": "Andrew Luck" },
-        { "q": "Who went #1 overall to the Bengals in 2020?", "a": "Joe Burrow" },
-        { "q": "Who was the #1 overall pick in 2021?", "a": "Trevor Lawrence" }
+        {
+          "q": "The QB that was selected in the 2nd round by the Atlanta Falcons in the 1991 NFL  Draft.",
+          "a": "Brett Favre"
+        },
+        {
+          "q": "He claimed in the 2021 NFL season that he STILL owns the Bears.",
+          "a": "Aaron Rodgers"
+        },
+        {
+          "q": "The only player in NFL history to average over 100 rushing yards per game for his entire career!",
+          "a": "Jim Brown"
+        },
+        {
+          "q": "\"OMAHA, OMAHA!\"",
+          "a": "Peyton Manning"
+        }
       ],
-      "link": "#1 overall NFL Draft picks"
+      "link": "Players to win back to back NFL MVP awards. "
     },
     {
-      "theme": "Super Bowl History",
+      "id": "4owv120",
+      "theme": "HINT: How many times did they sack the quarterback",
       "qs": [
-        { "q": "Which team won Super Bowls IX and X?", "a": "Pittsburgh Steelers" },
-        { "q": "Which team won Super Bowls XXIII and XXIV?", "a": "San Francisco 49ers" },
-        { "q": "Which team won Super Bowls XXVII and XXVIII?", "a": "Dallas Cowboys" },
-        { "q": "Which team won Super Bowls XXXII and XXXIII?", "a": "Denver Broncos" }
+        {
+          "q": "Introduced himself on SNF by saying \"homeschooled, thanks mom.\"",
+          "a": "Jared Allen"
+        },
+        {
+          "q": "When he retired, his team made a graphic that simply said \"Quarterbacks rejoice\".",
+          "a": "Aaron Donald"
+        },
+        {
+          "q": "These two brothers are revered among the league, both being first round picks out of the University of Wisconsin.",
+          "a": "TJ and JJ Watt"
+        },
+        {
+          "q": "This HOFer was a rookie during Lawrence Taylor's final season with the Giants. He would make history in the 2001 season.",
+          "a": "Michael Strahan"
+        }
       ],
-      "link": "Teams that won back-to-back Super Bowls"
+      "link": "Players who have reached 20+ sacks in one season. "
     },
     {
-      "theme": "Franchises",
+      "id": "vqxr6oc",
+      "theme": "HINT: Never left the dance alone",
       "qs": [
-        { "q": "Which team plays in the \"Dawg Pound\"?", "a": "Cleveland Browns" },
-        { "q": "Which team plays at Ford Field?", "a": "Detroit Lions" },
-        { "q": "Which team is based in Jacksonville?", "a": "Jacksonville Jaguars" },
-        { "q": "Which team joined the NFL as an expansion team in 2002?", "a": "Houston Texans" }
+        {
+          "q": " This team's Super Bowl victory featured 4 interceptions vs the New York Giants.",
+          "a": "Baltimore Ravens"
+        },
+        {
+          "q": "This team holds the record for the most total offensive yards in a single season. Having accomplished the feat in 2011.",
+          "a": "New Orleans Saints"
+        },
+        {
+          "q": "This team's quarterback famously guaranteed victory before they ultimately ended up winning Super Bowl III",
+          "a": "New York Jets"
+        },
+        {
+          "q": "This team has won the Super Bowl at their home stadium, twice.",
+          "a": "Tampa Bay Buccaneers"
+        }
       ],
-      "link": "Teams that have never played in a Super Bowl"
+      "link": "Teams with a perfect record in the Super Bowl"
     },
     {
-      "theme": "Divisions",
+      "id": "oytf149",
+      "theme": "HINT: Multi-sport ",
       "qs": [
-        { "q": "Which team won Super Bowl XX with the \"46\" defense?", "a": "Chicago Bears" },
-        { "q": "Which team has the most NFL championships?", "a": "Green Bay Packers" },
-        { "q": "Which team blows the Gjallarhorn before kickoff?", "a": "Minnesota Vikings" },
-        { "q": "Which team went 0-16 in 2008?", "a": "Detroit Lions" }
+        {
+          "q": "199th overall. Do we need to say more?",
+          "a": "Tom Brady"
+        },
+        {
+          "q": "This quarterback played for 4 different NFL franchises and was traded for a package that included 3 players and 5 draft picks.",
+          "a": "Russell Wilson"
+        },
+        {
+          "q": "This wide receiver, known for some hilarious touchdown antics spent 4 years in Seattle before being named a Pro Bowler in his first season as a Detroit Lion in 2014.",
+          "a": "Golden Tate III"
+        },
+        {
+          "q": "A Carolina Panthers 1st round draft pick in 2015, this linebacker played 10 seasons in Carolina before signing with Buffalo in 2025.",
+          "a": "Shaq Thompson"
+        }
       ],
-      "link": "NFC North teams"
+      "link": "NFL players drafted to the MLB"
     },
     {
-      "theme": "Rushing",
+      "id": "c89j582",
+      "theme": "HINT: Immediate impact outside the top 32",
       "qs": [
-        { "q": "Who set the single-season rushing record in 1984?", "a": "Eric Dickerson" },
-        { "q": "Who rushed for 2,105 yards in 2003?", "a": "Jamal Lewis" },
-        { "q": "Who rushed for 2,097 yards in 2012?", "a": "Adrian Peterson" },
-        { "q": "Who rushed for 2,027 yards in 2020?", "a": "Derrick Henry" }
+        {
+          "q": "On Christmas 2020, he tied the NFL record for most rushing touchdowns in one game with 6!",
+          "a": "Alvin Kamara"
+        },
+        {
+          "q": "He might have the most unique QB cadence the NFL has ever seen. ",
+          "a": "Dak Prescott"
+        },
+        {
+          "q": "This player still holds the record for the most receiving yards in a player's NFL debut. ",
+          "a": "Anquan Boldin"
+        },
+        {
+          "q": "A pro-bowler in his first season, this Packers and Seahawks running back only spent 5 seasons in the NFL.",
+          "a": "Eddie Lacy"
+        }
       ],
-      "link": "Running backs with a 2,000-yard season"
+      "link": "OROTYs drafted outside of the first round"
     },
     {
-      "theme": "Birds",
+      "id": "46ragt5",
+      "theme": "HINT: The top four BLANK",
       "qs": [
-        { "q": "Which team won Super Bowl LII?", "a": "Philadelphia Eagles" },
-        { "q": "Which team blew a 28-3 lead in Super Bowl LI?", "a": "Atlanta Falcons" },
-        { "q": "Which team won Super Bowl XLVIII?", "a": "Seattle Seahawks" },
-        { "q": "Which team plays its home games in Glendale, Arizona?", "a": "Arizona Cardinals" }
+        {
+          "q": "One of three running backs in the illustrious 1000/1000 club, this running back won the Super Bowl the same season he accomplished this feat.",
+          "a": "Marshall Faulk"
+        },
+        {
+          "q": "Another running back in the illustrious 1000/1000 club, the most recent running back to join the club.",
+          "a": "Christian McCaffrey"
+        },
+        {
+          "q": "At age 28, this player erupted for his first of three 2000+ scrimmage yard seasons in 2001.",
+          "a": "Priest Holmes"
+        },
+        {
+          "q": "The NFL player with the record for the most rushing touchdowns in a single season.",
+          "a": "LaDanian Tomlinson"
+        }
       ],
-      "link": "NFL teams named after birds"
+      "link": "The top four highest scoring fantasy football seasons of all time"
+    },
+    {
+      "id": "commmum",
+      "theme": "HINT: On and off the field",
+      "qs": [
+        {
+          "q": "Nicknamed MCDC, this tight end played for 3 NFL franchises from 1999-2008.",
+          "a": "Dan Campbell"
+        },
+        {
+          "q": "This Alabama linebacker won 2005 SEC defensive player of the year and won 2006 NFL defensive rookie of the year with Houston. A two time coach of the year, he earned the honor in 2021 and 2025 for two different franchises. ",
+          "a": "Demeco Ryans"
+        },
+        {
+          "q": "This tight end won a Super Bowl as a player and as a coach.",
+          "a": "Mike Ditka"
+        },
+        {
+          "q": ". A two time coach of the year, he earned the honor in 2021 and 2025 for two different franchises. ",
+          "a": "Mike Vrabel"
+        }
+      ],
+      "link": "Coaches of a team they played for"
+    },
+    {
+      "id": "qk16fcb",
+      "theme": "HINT: Highest honor despite being undrafted",
+      "qs": [
+        {
+          "q": "Two time NFL MVP and a key piece of the greatest show on turf.",
+          "a": "Kurt Warner"
+        },
+        {
+          "q": "A defensive lineman who anchored the Vikings defense for 11 seasons before joining Seattle for 3 seasons.",
+          "a": "John Randle"
+        },
+        {
+          "q": "The man with the most points in NFL history.",
+          "a": "Adam Vinatieri"
+        },
+        {
+          "q": "The all time leader in receiving touchdowns at his position, he was inducted into the HOF in the class of 2025.",
+          "a": "Antonio Gates"
+        }
+      ],
+      "link": "Undrafted All Pros"
+    },
+    {
+      "id": "1qop4kl",
+      "theme": "HINT: How many have these teams won?",
+      "qs": [
+        {
+          "q": "This team holds the record for the most quarterbacks drafted first overall, having selected 4 of them.",
+          "a": "Indianapolis Colts"
+        },
+        {
+          "q": "A team that should thank Eli Manning for defeating the team that could have matched their remarkable achievement.",
+          "a": "Miami Dolphins"
+        },
+        {
+          "q": "The second franchise in NFL history to win the Super Bowl in their own stadium.",
+          "a": "Los Angeles Rams"
+        },
+        {
+          "q": "The team that holds the most iconic trick play in Super Bowl history.",
+          "a": "Philadelphia Eagles"
+        }
+      ],
+      "link": "Franchises with exactly 2 Super Bowls"
+    },
+    {
+      "id": "ktt9kgy",
+      "theme": "HINT: Changed something this decade",
+      "qs": [
+        {
+          "q": "",
+          "a": "Washington Commanders"
+        },
+        {
+          "q": "",
+          "a": "Chicago Bears"
+        },
+        {
+          "q": "",
+          "a": "Tennessee Titans"
+        },
+        {
+          "q": "",
+          "a": "Los Angeles Rams"
+        }
+      ],
+      "link": "NFL teams who changed logos in the 2020s"
+    },
+    {
+      "id": "0fdpziq",
+      "theme": "HINT: Top 4 and not 4",
+      "qs": [
+        {
+          "q": "2005 Heisman Winner at USC, this running back was drafted by the Saints where he won Offensive Rookie Of The Year in 2006.",
+          "a": "Reggie Bush"
+        },
+        {
+          "q": "This NFL player also played in the MLB and was drafted in the NFL by TWO teams!!!",
+          "a": "Bo Jackson"
+        },
+        {
+          "q": "A Madden cover showcasing him making a superhuman play vs the Jaguars in 2024, the season which this player won OPOY.",
+          "a": "Saquon Barkley"
+        },
+        {
+          "q": "A running back who suffered a devastating ACL tear, missed his rookie season in 1995. His career is considered one of the biggest \"what-ifs\" in NFL history.",
+          "a": "Ki-Jana Carter"
+        }
+      ],
+      "link": "Running backs drafted in the top 3"
     }
   ]
 }
