@@ -249,6 +249,19 @@ h3 {
   box-shadow: 6px 6px 0 var(--ink);
 }
 
+.btn.gold:disabled {
+  background: #55525f;
+  color: #b9b6c4;
+  cursor: not-allowed;
+  box-shadow: var(--shadow);
+}
+
+.btn.gold:disabled:hover {
+  transform: none;
+  background: #55525f;
+  box-shadow: var(--shadow);
+}
+
 .btn.danger {
   background: #ffe2ee;
   color: var(--pink-dark);
@@ -596,6 +609,13 @@ input::placeholder {
 .link-panel.shown .link-answer {
   opacity: 1;
   max-height: 220px;
+}
+
+.link-lock-note {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #a9a6b8;
 }
 
 /* =========================================================

@@ -9,6 +9,10 @@ let play = {
   linkShown: false
 };
 
+function allRevealed(){
+  return play.revealed.every(Boolean);
+}
+
 function renderPlay(){
   const wrap = document.getElementById('view-play');
   if (!wrap) return;
@@ -57,6 +61,8 @@ function renderPlay(){
       <div class="atext">${esc(qa.a) || '—'}</div>
     </button>`).join('');
 
+  const linkReady = allRevealed();
+
   wrap.innerHTML = `
     <div class="play-head">
       <div class="counter">
@@ -73,7 +79,12 @@ function renderPlay(){
     <div class="tiles">${tiles}</div>
 
     <div class="link-panel ${play.linkShown ? 'shown' : ''}" id="linkPanel">
-      <button class="btn gold" id="btnLink">${play.linkShown ? 'Hide the Link' : '🔗 Reveal the Link'}</button>
+      <button class="btn gold" id="btnLink" ${linkReady ? '' : 'disabled'}>
+        ${play.linkShown ? 'Hide the Link' : '🔗 Reveal the Link'}
+      </button>
+      <p class="link-lock-note ${linkReady ? 'hidden' : ''}" id="linkLockNote">
+        Reveal all 4 answers to unlock the hint
+      </p>
       <div class="link-answer">${esc(card.link) || '—'}</div>
     </div>
 
@@ -122,9 +133,31 @@ function toggleReveal(i){
   play.revealed[i] = !play.revealed[i];
   const tile = document.querySelector(`#view-play .tile[data-i="${i}"]`);
   if (tile) tile.classList.toggle('revealed', play.revealed[i]);
+  updateLinkLock();
+}
+
+/* keeps the Reveal the Link button/lock note in sync without a full re-render */
+function updateLinkLock(){
+  const ready = allRevealed();
+  const btn = document.getElementById('btnLink');
+  const note = document.getElementById('linkLockNote');
+  if (btn) btn.disabled = !ready;
+  if (note) note.classList.toggle('hidden', ready);
+
+  /* if the link was showing and a question gets un-revealed again, hide it */
+  if (!ready && play.linkShown){
+    play.linkShown = false;
+    const panel = document.getElementById('linkPanel');
+    if (panel) panel.classList.remove('shown');
+    if (btn) btn.textContent = '🔗 Reveal the Link';
+  }
 }
 
 function toggleLink(){
+  if (!allRevealed()){
+    toast('Reveal all 4 answers first');
+    return;
+  }
   play.linkShown = !play.linkShown;
   const p = document.getElementById('linkPanel');
   const b = document.getElementById('btnLink');
