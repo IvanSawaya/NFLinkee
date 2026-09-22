@@ -1,23 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Baloo+2:wght@600;700;800&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 :root {
-  --bg: #f5f1e8;
+  --bg: #fff6e0;
   --surface: #ffffff;
-  --surface-soft: #fffaf0;
-  --navy: #10233f;
-  --navy-soft: #243b5a;
-  --red: #d93832;
-  --red-dark: #b92d28;
-  --gold: #f4bd3f;
-  --green: #31a66a;
-  --blue: #4b8fce;
-  --text: #18283c;
-  --muted: #718096;
-  --line: #ded8cc;
-  --shadow: 0 8px 24px rgba(30, 43, 61, 0.10);
-  --shadow-big: 0 16px 40px rgba(30, 43, 61, 0.14);
+  --surface-soft: #fff2f8;
+
+  --ink: #16161d;
+
+  --pink: #ff2e88;
+  --pink-dark: #d61c6d;
+  --teal: #00c2a8;
+  --teal-dark: #00a08a;
+  --yellow: #ffd447;
+  --yellow-dark: #f0b400;
+  --purple: #7b5cff;
+  --orange: #ff7a29;
+
+  --red: #ff2e88;      /* alias so existing rules using --red stay on-brand */
+  --red-dark: #d61c6d;
+  --gold: #ffd447;
+  --green: #00c2a8;
+  --blue: #7b5cff;
+
+  --navy: #16161d;      /* alias: dark ink used for borders/text everywhere */
+  --navy-soft: #3a3a46;
+
+  --text: #16161d;
+  --muted: #7a7686;
+  --line: #16161d;
+
+  --shadow: 4px 4px 0 var(--ink);
+  --shadow-big: 7px 7px 0 var(--ink);
 }
 
 html,
@@ -27,10 +44,11 @@ body {
 }
 
 body {
-  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  font-family: "Fredoka", "Baloo 2", "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
   background:
-    radial-gradient(circle at 10% 0%, rgba(217, 56, 50, 0.08), transparent 25%),
-    radial-gradient(circle at 90% 0%, rgba(244, 189, 63, 0.13), transparent 25%),
+    radial-gradient(circle at 8% 6%, rgba(255, 46, 136, 0.10), transparent 30%),
+    radial-gradient(circle at 92% 4%, rgba(0, 194, 168, 0.14), transparent 32%),
+    radial-gradient(circle at 50% 100%, rgba(255, 212, 71, 0.16), transparent 40%),
     var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -52,54 +70,59 @@ body {
 
   padding: 15px 28px;
 
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(12px);
+  background: var(--surface);
 
-  border-bottom: 3px solid var(--navy);
+  border-bottom: 4px solid var(--ink);
 }
 
 .brand {
-  font-weight: 1000;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
   letter-spacing: -0.5px;
-  font-size: 23px;
+  font-size: 25px;
   white-space: nowrap;
-  color: var(--navy);
+  color: var(--ink);
 }
 
 .brand .accent {
-  color: var(--red);
+  color: var(--pink);
+  text-shadow: 2px 2px 0 var(--yellow);
 }
 
 nav {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 nav button {
-  background: transparent;
-  border: 2px solid transparent;
-  color: var(--navy-soft);
+  background: var(--surface);
+  border: 3px solid var(--ink);
+  color: var(--ink);
 
-  padding: 9px 15px;
+  padding: 8px 16px;
   border-radius: 999px;
 
   cursor: pointer;
   font-size: 14px;
-  font-weight: 800;
-  transition: 0.15s;
+  font-weight: 700;
+  transition: 0.12s;
 
-  font-family: inherit;
+  font-family: "Fredoka", inherit;
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 nav button:hover {
-  background: #f0ece3;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--yellow);
 }
 
 nav button.active {
-  background: var(--red);
+  background: var(--pink);
   color: white;
-  border-color: var(--red);
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 /* =========================================================
@@ -122,23 +145,25 @@ main {
 
 h2 {
   margin: 0 0 8px;
-  font-size: 27px;
-  font-weight: 1000;
-  color: var(--navy);
+  font-family: "Baloo 2", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--ink);
 }
 
 h3 {
   margin: 0 0 10px;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
 }
 
 .panel {
   background: var(--surface);
-  border: 2px solid var(--line);
-  border-radius: 22px;
+  border: 3px solid var(--ink);
+  border-radius: 24px;
   padding: 24px;
   margin-bottom: 20px;
   box-shadow: var(--shadow);
@@ -150,15 +175,15 @@ h3 {
 
 .btn {
   background: var(--surface);
-  color: var(--navy);
+  color: var(--ink);
 
-  border: 2px solid var(--navy);
+  border: 3px solid var(--ink);
 
-  padding: 11px 18px;
-  border-radius: 12px;
+  padding: 10px 18px;
+  border-radius: 14px;
 
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 14px;
 
   transition:
@@ -166,59 +191,64 @@ h3 {
     box-shadow 0.12s,
     background 0.12s;
 
-  font-family: inherit;
+  font-family: "Fredoka", inherit;
   white-space: nowrap;
+
+  box-shadow: var(--shadow);
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 0 var(--navy);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+  background: var(--yellow);
 }
 
 .btn:active {
-  transform: translateY(1px);
-  box-shadow: none;
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 .btn.green {
-  background: var(--green);
+  background: var(--teal);
   color: white;
-  border-color: #258653;
+  border-color: var(--ink);
 }
 
 .btn.green:hover {
-  background: #29945e;
-  box-shadow: 0 5px 0 #207449;
+  background: var(--teal-dark);
 }
 
 .btn.gold {
-  background: var(--gold);
-  color: var(--navy);
-  border-color: #d69d21;
+  background: var(--yellow);
+  color: var(--ink);
+  border-color: var(--ink);
   font-size: 16px;
-  padding: 13px 24px;
+  padding: 13px 26px;
 }
 
 .btn.gold:hover {
-  background: #f7c64f;
-  box-shadow: 0 5px 0 #b98319;
+  background: #ffe08a;
 }
 
 .btn.danger {
-  background: #fff0ef;
-  color: var(--red-dark);
-  border-color: #e5aaa6;
+  background: #ffe2ee;
+  color: var(--pink-dark);
+  border-color: var(--ink);
 }
 
 .btn.danger:hover {
-  background: #ffe5e3;
-  box-shadow: 0 5px 0 #dca09c;
+  background: #ffc9de;
 }
 
 .btn.tiny {
-  padding: 7px 11px;
+  padding: 6px 11px;
   font-size: 12px;
-  border-radius: 9px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.btn.tiny:hover {
+  box-shadow: 4px 4px 0 var(--ink);
 }
 
 /* =========================================================
@@ -226,15 +256,15 @@ h3 {
    ========================================================= */
 
 input {
-  background: #fffdf9;
-  border: 2px solid var(--line);
+  background: var(--surface);
+  border: 3px solid var(--ink);
   color: var(--text);
 
   padding: 11px 13px;
-  border-radius: 11px;
+  border-radius: 12px;
 
   font-size: 14px;
-  font-family: inherit;
+  font-family: "Fredoka", inherit;
 
   width: 100%;
   transition: 0.15s;
@@ -242,12 +272,12 @@ input {
 
 input:focus {
   outline: none;
-  border-color: var(--red);
-  box-shadow: 0 0 0 3px rgba(217, 56, 50, 0.12);
+  border-color: var(--pink);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 input::placeholder {
-  color: #a1a8b1;
+  color: #b3aebf;
 }
 
 /* =========================================================
@@ -265,8 +295,9 @@ input::placeholder {
 }
 
 .counter {
-  font-weight: 1000;
-  color: var(--navy);
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
+  color: var(--ink);
   font-size: 14px;
 
   letter-spacing: 0.7px;
@@ -281,30 +312,32 @@ input::placeholder {
 
 .timer {
   font-variant-numeric: tabular-nums;
-  font-weight: 1000;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
   font-size: 22px;
 
   min-width: 70px;
   text-align: right;
 
-  color: var(--navy);
+  color: var(--ink);
 }
 
 .chip {
   display: inline-block;
 
-  background: #fff4d7;
-  border: 2px solid #e6bf60;
+  background: var(--yellow);
+  border: 2px solid var(--ink);
 
-  color: #956900;
+  color: var(--ink);
 
-  padding: 4px 10px;
+  padding: 4px 11px;
   border-radius: 999px;
 
   font-size: 11px;
-  font-weight: 900;
+  font-weight: 700;
 
   margin-left: 8px;
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 /* =========================================================
@@ -314,9 +347,9 @@ input::placeholder {
 .tiles {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 18px;
 
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .tile {
@@ -327,8 +360,8 @@ input::placeholder {
 
   background: var(--surface);
 
-  border: 3px solid var(--navy);
-  border-radius: 20px;
+  border: 4px solid var(--ink);
+  border-radius: 22px;
 
   padding: 20px;
 
@@ -342,38 +375,44 @@ input::placeholder {
 
   min-height: 175px;
 
+  box-shadow: var(--shadow-big);
+
   transition:
     transform 0.15s,
     box-shadow 0.15s,
-    background 0.15s,
-    border-color 0.15s;
+    background 0.15s;
 }
 
 .tile:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-big);
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0 var(--ink);
 }
 
 .tile:nth-child(1) {
-  border-color: var(--red);
+  background: #fff0f7;
 }
 
 .tile:nth-child(2) {
-  border-color: var(--blue);
+  background: #eafffb;
 }
 
 .tile:nth-child(3) {
-  border-color: var(--green);
+  background: #fffbe8;
 }
 
 .tile:nth-child(4) {
-  border-color: var(--gold);
+  background: #f3f0ff;
 }
+
+.tile:nth-child(1) .qnum { background: var(--pink); }
+.tile:nth-child(2) .qnum { background: var(--teal); }
+.tile:nth-child(3) .qnum { background: var(--yellow); color: var(--ink); }
+.tile:nth-child(4) .qnum { background: var(--purple); }
 
 .tile.revealed {
   background: var(--surface-soft);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--ink);
 }
 
 .tile-top {
@@ -384,22 +423,26 @@ input::placeholder {
 }
 
 .qnum {
-  font-size: 11px;
-  font-weight: 1000;
-  letter-spacing: 1px;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 
   color: white;
 
-  background: var(--navy);
+  background: var(--ink);
 
-  padding: 5px 9px;
-  border-radius: 7px;
+  padding: 5px 11px;
+  border-radius: 8px;
+  border: 2px solid var(--ink);
 }
 
 .peek {
   font-size: 11px;
   color: var(--muted);
-  font-weight: 800;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 
   transition: opacity 0.2s;
 }
@@ -411,16 +454,17 @@ input::placeholder {
 .qtext {
   font-size: 17px;
   line-height: 1.45;
-  font-weight: 800;
+  font-weight: 600;
 
   flex: 1;
 }
 
 .atext {
-  font-size: 19px;
-  font-weight: 1000;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
 
-  color: var(--red);
+  color: var(--pink);
 
   opacity: 0;
   max-height: 0;
@@ -448,42 +492,43 @@ input::placeholder {
 
   gap: 14px;
 
-  background: var(--navy);
+  background: var(--ink);
 
-  border: 3px dashed #8290a4;
-  border-radius: 22px;
+  border: 4px dashed #6c6a78;
+  border-radius: 24px;
 
-  padding: 24px;
+  padding: 26px;
 
   text-align: center;
 
-  transition:
-    0.25s;
+  transition: 0.25s;
 
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .link-panel::before {
-  content: "WHAT'S THE CONNECTION?";
-  color: #cdd6e2;
+  content: "WHAT'S THE LINKEE?";
+  color: #cfc9dd;
 
-  font-size: 11px;
-  font-weight: 1000;
-  letter-spacing: 1.8px;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .link-panel.shown {
   border-style: solid;
-  border-color: var(--gold);
+  border-color: var(--yellow);
 
-  background: #172b4a;
+  background: #24243a;
 }
 
 .link-answer {
-  font-size: 29px;
-  font-weight: 1000;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
 
-  color: var(--gold);
+  color: var(--yellow);
 
   letter-spacing: 0.3px;
 
@@ -514,7 +559,7 @@ input::placeholder {
 
   justify-content: center;
 
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .play-actions .green {
@@ -527,11 +572,11 @@ input::placeholder {
 
 .scoreboard {
   display: flex;
-  gap: 12px;
+  gap: 14px;
 
   flex-wrap: wrap;
 
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .team-card {
@@ -539,22 +584,27 @@ input::placeholder {
 
   background: var(--surface);
 
-  border: 2px solid var(--line);
-  border-radius: 17px;
+  border: 3px solid var(--ink);
+  border-radius: 18px;
 
   padding: 14px;
 
   text-align: center;
 
-  box-shadow: 0 4px 12px rgba(30, 43, 61, 0.06);
+  box-shadow: var(--shadow);
 }
+
+.team-card:nth-child(4n+1) { background: #fff0f7; }
+.team-card:nth-child(4n+2) { background: #eafffb; }
+.team-card:nth-child(4n+3) { background: #fffbe8; }
+.team-card:nth-child(4n+4) { background: #f3f0ff; }
 
 .team-name {
   font-size: 12px;
 
   color: var(--muted);
 
-  font-weight: 1000;
+  font-weight: 800;
 
   margin-bottom: 6px;
 
@@ -565,11 +615,12 @@ input::placeholder {
 }
 
 .team-score {
-  font-size: 38px;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 40px;
 
-  font-weight: 1000;
+  font-weight: 800;
 
-  color: var(--red);
+  color: var(--pink);
 
   line-height: 1;
 
@@ -586,29 +637,33 @@ input::placeholder {
 .team-btns button {
   flex: 1;
 
-  background: #f5f1e8;
+  background: var(--surface);
 
-  border: 2px solid var(--line);
+  border: 2px solid var(--ink);
 
-  color: var(--navy);
+  color: var(--ink);
 
-  border-radius: 9px;
+  border-radius: 10px;
 
   padding: 7px 0;
 
   font-size: 16px;
 
-  font-weight: 1000;
+  font-weight: 800;
 
   cursor: pointer;
 
-  transition: 0.15s;
+  transition: 0.12s;
 
-  font-family: inherit;
+  font-family: "Fredoka", inherit;
+
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 .team-btns button:hover {
-  background: #e9e3d8;
+  background: var(--yellow);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 /* =========================================================
@@ -629,18 +684,18 @@ input::placeholder {
   color: var(--muted);
 
   font-size: 13px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .card-editor {
   background: var(--surface);
 
-  border: 2px solid var(--line);
-  border-radius: 20px;
+  border: 3px solid var(--ink);
+  border-radius: 22px;
 
   padding: 18px 20px;
 
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 
   box-shadow: var(--shadow);
 }
@@ -658,11 +713,12 @@ input::placeholder {
 }
 
 .ce-num {
+  font-family: "Baloo 2", sans-serif;
   font-size: 12px;
 
-  font-weight: 1000;
+  font-weight: 800;
 
-  color: var(--red);
+  color: var(--pink);
 
   letter-spacing: 1px;
 
@@ -695,13 +751,13 @@ input::placeholder {
 
   padding-top: 14px;
 
-  border-top: 2px dashed var(--line);
+  border-top: 3px dashed var(--line);
 }
 
 .ce-label {
   font-size: 12px;
 
-  font-weight: 1000;
+  font-weight: 800;
 
   color: var(--muted);
 
@@ -711,18 +767,18 @@ input::placeholder {
 }
 
 .ce-label.gold {
-  color: #a47500;
+  color: var(--yellow-dark);
 }
 
 .ce-row.link-row input {
-  border-color: #e4c77a;
-  background: #fffaf0;
+  border-color: var(--ink);
+  background: #fffbe8;
 }
 
 .ce-row.link-row input:focus {
-  border-color: var(--gold);
+  border-color: var(--yellow-dark);
 
-  box-shadow: 0 0 0 3px rgba(244, 189, 63, 0.16);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 /* =========================================================
@@ -742,17 +798,18 @@ input::placeholder {
 }
 
 .team-row .score-pill {
-  background: #fffaf0;
+  background: #fffbe8;
 
-  border: 2px solid var(--line);
+  border: 3px solid var(--ink);
 
-  border-radius: 9px;
+  border-radius: 10px;
 
   padding: 9px 16px;
 
-  font-weight: 1000;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
 
-  color: var(--red);
+  color: var(--pink);
 
   font-variant-numeric: tabular-nums;
 }
@@ -792,9 +849,9 @@ input::placeholder {
 .kbd {
   display: inline-block;
 
-  background: #f4f0e7;
+  background: #fff0f7;
 
-  border: 2px solid var(--line);
+  border: 2px solid var(--ink);
 
   border-bottom-width: 3px;
 
@@ -804,11 +861,11 @@ input::placeholder {
 
   font-size: 12px;
 
-  font-weight: 900;
+  font-weight: 800;
 
   font-family: ui-monospace, monospace;
 
-  color: var(--navy);
+  color: var(--ink);
 }
 
 /* =========================================================
@@ -823,15 +880,17 @@ input::placeholder {
 
   transform: translateX(-50%) translateY(20px);
 
-  background: var(--navy);
+  background: var(--ink);
 
   color: white;
 
-  font-weight: 900;
+  font-weight: 700;
 
   padding: 12px 22px;
 
   border-radius: 999px;
+
+  border: 3px solid var(--ink);
 
   opacity: 0;
 
@@ -870,7 +929,7 @@ input::placeholder {
   }
 
   nav button {
-    padding: 8px 11px;
+    padding: 8px 12px;
     font-size: 12px;
   }
 
